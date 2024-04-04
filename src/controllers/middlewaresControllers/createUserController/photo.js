@@ -22,6 +22,7 @@ const photo = async (userModel, req, res) => {
       message: 'No document found ',
     });
   } else {
+    
     // Return success resposne
     let result = {
       _id: tmpResult._id,

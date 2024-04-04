@@ -8,6 +8,7 @@ const createAuthMiddleware = (userModel) => {
   let authMethods = {};
 
   authMethods.isValidAuthToken = (req, res, next) =>
+  
     isValidAuthToken(req, res, next, {
       userModel,
     });

@@ -15,7 +15,7 @@ exports.roles = roles;
 exports.hasPermission = (permissionName = 'none') => {
   return function (req, res, next) {
     const currentUserRole = req.admin.role;
-
+    
     if (
       roles[currentUserRole]?.includes(permissionName) ||
       req.admin.role === 'owner' ||
