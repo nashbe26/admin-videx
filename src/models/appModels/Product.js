@@ -95,6 +95,13 @@ const schema = new mongoose.Schema({
     type: Boolean,
     default: true,
   },
+    promo: {
+    type: Boolean,
+    default: true,
+  },
+    remise: {
+    type: Number,
+  },
 });
 
 schema.plugin(require('mongoose-autopopulate'));
