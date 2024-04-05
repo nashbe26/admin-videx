@@ -36,6 +36,6 @@ const app = require('./app');
 const { setupApp } = require('./setup/setup');
 app.set('port', process.env.PORT || 8888);
 const server = app.listen(app.get('port'), () => {
-  setupApp()
+  //setupApp()
   console.log(`Express running → On PORT : ${server.address().port}`);
 });

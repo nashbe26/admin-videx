@@ -6,7 +6,7 @@ const create = async (Model, req, res) => {
   let images = [];
 
   if (req.file)
-    req.body.product_images = "http://localhost:8888/public/uploads/product/"+req.file.filename;
+    req.body.product_images = "https://admin.auto-videx.com/public/uploads/product/"+req.file.filename;
 
   const result = await new Model({
     ...req.body
