@@ -13,6 +13,10 @@ const routerApp = (entity, controller) => {
     router
     .route(`/${entity}/create`)
     .post(hasPermission('create'),singleStorageUpload({ entity: 'product', fieldName: 'file', fileType: 'image' }), catchErrors(controller['create']));
+   router
+    .route(`/${entity}/update/:id`)
+    .patch(hasPermission('update'),singleStorageUpload({ entity: 'product', fieldName: 'file', fileType: 'image' }),  catchErrors(controller['update']));
+  
   }
 
   router

@@ -1,6 +1,10 @@
 const update = async (Model, req, res) => {
   // Find document by id and updates with the required fields
   req.body.removed = false;
+  if (req.file)
+    req.body.product_images = "https://admin.auto-videx.com/public/uploads/product/"+req.file.filename;
+
+
   const result = await Model.findOneAndUpdate({ _id: req.params.id, removed: false }, req.body, {
     new: true, // return the new result instead of the old one
     runValidators: true,
