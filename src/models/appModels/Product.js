@@ -16,6 +16,12 @@ const schema = new mongoose.Schema({
     required: true,
     autopopulate: true,
   },
+  brands: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'Brands',
+    required: true,
+    autopopulate: true,
+  },
   suppliers: [{ type: mongoose.Schema.ObjectId, ref: 'Supplier' }],
   name: {
     type: String,

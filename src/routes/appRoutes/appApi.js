@@ -9,6 +9,8 @@ const { singleStorageUpload } = require('@/middlewares/uploadMiddleware');
 
 const routerApp = (entity, controller) => {
 
+  console.log(entity);
+
   if(entity === 'product'){
     router
     .route(`/${entity}/create`)
